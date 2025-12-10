@@ -12,7 +12,7 @@
 
 1. Ensure WAMP/XAMPP is running
 2. Copy the entire project folder to your www directory (e.g., c:/wamp64/www/)
-3. The backend API will be available at: http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/
+3. The backend API will be available at: http://localhost/zaphira-backend/api/
 
 ### 3. Frontend Setup
 

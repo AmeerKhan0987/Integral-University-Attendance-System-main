@@ -19,7 +19,7 @@ export default function LeaveManagement() {
   const fetchLeaves = async () => {
     try {
       const res = await axios.get(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_leaves.php"
+        "http://localhost/zaphira-backend/api/get_leaves.php"
       );
       if (res.data.success) setLeaves(res.data.data);
     } catch (err) {
@@ -31,7 +31,7 @@ export default function LeaveManagement() {
   const updateStatus = async (id: number, status: string) => {
     try {
       await axios.post(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/update_leave_status.php",
+        "http://localhost/zaphira-backend/api/update_leave_status.php",
         { id, status },
         { headers: { "Content-Type": "application/json" } }
       );

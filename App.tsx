@@ -14,7 +14,7 @@ const AppContent = () => {
   const handleLogin = async (email: string, pass: string, role: Role) => {
     try {
       const response = await fetch(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/login.php",
+        "http://localhost/zaphira-backend/api/login.php",
         {
           method: "POST",
           headers: {

@@ -28,7 +28,7 @@ export default function LeaveApplication({ user }: LeaveApplicationProps) {
   const fetchPendingLeave = async () => {
     try {
       const res = await axios.get(
-        `http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_employee_leaves.php?employee_id=${user.id}`
+        `http://localhost/zaphira-backend/api/get_employee_leaves.php?employee_id=${user.id}`
       );
       if (res.data.success && res.data.data.length > 0) {
         const pending = res.data.data.find(
@@ -57,7 +57,7 @@ export default function LeaveApplication({ user }: LeaveApplicationProps) {
 
     try {
       const res = await axios.post(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/apply_leave.php",
+        "http://localhost/zaphira-backend/api/apply_leave.php",
         {
           employee_id: user.id,
           date_from: dateFrom,

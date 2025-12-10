@@ -36,7 +36,7 @@ export default function Profile({ user, onImageChange }: ProfileProps) {
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          `http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_profile.php?employee_id=${employeeId}`,
+          `http://localhost/zaphira-backend/api/get_profile.php?employee_id=${employeeId}`,
           { withCredentials: true }
         );
 
@@ -76,7 +76,7 @@ export default function Profile({ user, onImageChange }: ProfileProps) {
     setSaving(true);
     try {
       const res = await axios.post(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/update_profile.php",
+        "http://localhost/zaphira-backend/api/update_profile.php",
         profile,
         { withCredentials: true }
       );
@@ -105,13 +105,13 @@ export default function Profile({ user, onImageChange }: ProfileProps) {
 
     try {
       const res = await axios.post(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/update_profile_image.php",
+        "http://localhost/zaphira-backend/api/update_profile_image.php",
         formData,
         { withCredentials: true }
       );
 
       if (res.data.success) {
-        const newImageUrl = `http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/${res.data.image_url}`;
+        const newImageUrl = `http://localhost/zaphira-backend/${res.data.image_url}`;
 
         // ✅ Update local state
         setProfile({ ...profile, profile_image: newImageUrl });
@@ -173,7 +173,7 @@ export default function Profile({ user, onImageChange }: ProfileProps) {
             profile.profile_image
               ? profile.profile_image.startsWith("http")
                 ? profile.profile_image
-                : `http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/${profile.profile_image}`
+                : `http://localhost/zaphira-backend/${profile.profile_image}`
               : "/images/logo.jpeg"
           }
           alt="Profile"

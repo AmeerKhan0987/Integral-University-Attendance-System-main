@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api",
+  baseURL: "http://localhost/zaphira-backend/api",
   headers: { "Content-Type": "application/json" }
 });
 

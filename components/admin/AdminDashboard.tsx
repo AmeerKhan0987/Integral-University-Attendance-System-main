@@ -46,21 +46,21 @@ export default function AdminDashboard({
     try {
       // 🟢 Fetch Stats
       const statsRes = await fetch(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_dashboard_stats.php"
+        "http://localhost/zaphira-backend/api/get_dashboard_stats.php"
       );
       const statsData = await statsRes.json();
       if (statsData.success) setStats(statsData.data);
 
       // 🟠 Fetch Today Attendance Log
       const logRes = await fetch(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_attendance_log.php"
+        "http://localhost/zaphira-backend/api/get_attendance_log.php"
       );
       const logData = await logRes.json();
       if (logData.success) setAttendanceLog(logData.data);
 
       // 🔵 Fetch Monthly Chart
       const chartRes = await fetch(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_monthly_chart.php"
+        "http://localhost/zaphira-backend/api/get_monthly_chart.php"
       );
       const chartData = await chartRes.json();
       if (chartData.success) setMonthlyChart(chartData.data);

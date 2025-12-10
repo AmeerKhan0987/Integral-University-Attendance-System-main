@@ -33,7 +33,7 @@ export default function AttendanceReports({
   monthlyChart,
 }: AttendanceReportsProps) {
   const BASE_URL =
-    "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend";
+    "http://localhost/zaphira-backend";
 
   const handleExportCSV = () => {
     let csvContent = "data:text/csv;charset=utf-8,";

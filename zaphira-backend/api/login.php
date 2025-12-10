@@ -59,7 +59,7 @@ try {
                     'department' => 'Management',
                     'designation' => 'Administrator',
                     'profileImage' => $user['profile_image']
-                        ? "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/{$user['profile_image']}"
+                        ? "http://localhost/zaphira-backend/{$user['profile_image']}"
                         : null,
                     'createdAt' => $user['created_at']
                 ]
@@ -79,7 +79,7 @@ try {
                     'department' => 'Management',
                     'designation' => 'Administrator',
                     'profileImage' => $user['profile_image']
-                        ? "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/{$user['profile_image']}"
+                        ? "http://localhost/zaphira-backend/{$user['profile_image']}"
                         : null,
                     'createdAt' => $user['created_at']
                 ]
@@ -120,7 +120,7 @@ try {
 
                     // ✅ FIXED HERE (Removed pravatar)
                     'profileImage' => $user['profile_image']
-                        ? "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/{$user['profile_image']}"
+                        ? "http://localhost/zaphira-backend/{$user['profile_image']}"
                         : null,
 
                     'faceData' => $user['face_data'],

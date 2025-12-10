@@ -29,7 +29,7 @@ function SignUpForm({ onBackToLogin }: { onBackToLogin: () => void }) {
 
     try {
       const response = await fetch(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/register.php",
+        "http://localhost/zaphira-backend/api/register.php",
         {
           method: "POST",
           headers: {

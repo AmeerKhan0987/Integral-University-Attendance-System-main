@@ -15,7 +15,7 @@ export default function AttendanceHistory({ user }: AttendanceHistoryProps) {
     const fetchAttendance = async () => {
       try {
         const res = await fetch(
-          `http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_attendance.php?employee_id=${user.id}`
+          `http://localhost/zaphira-backend/api/get_attendance.php?employee_id=${user.id}`
         );
         const data = await res.json();
         if (data.success) setAttendanceData(data.data);

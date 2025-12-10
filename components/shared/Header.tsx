@@ -63,13 +63,13 @@ export default function Header({ user, onLogout, logoUrl }: HeaderProps) {
     setUpdatingImage(true);
     try {
       const res = await axios.post(
-        "http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/update_profile_image.php",
+        "http://localhost/zaphira-backend/api/update_profile_image.php",
         formData,
         { withCredentials: true }
       );
 
       if (res.data.success) {
-        const newUrl = `http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/${res.data.image_url}`;
+        const newUrl = `http://localhost/zaphira-backend/${res.data.image_url}`;
         setProfileImage(newUrl);
         localStorage.setItem(
           "currentUserImage",

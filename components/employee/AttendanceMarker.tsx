@@ -25,7 +25,7 @@ export default function AttendanceMarker({ user }: AttendanceMarkerProps) {
   const fetchTodayAttendance = async () => {
     try {
       const res = await fetch(
-        `http://localhost/zaphira-organic-farm-attendance-system-2/zaphira-backend/api/get_attendance.php?employee_id=${user.id}`,
+        `http://localhost/zaphira-backend/api/get_attendance.php?employee_id=${user.id}`,
         { credentials: "include" }
       );
       const data = await res.json();
