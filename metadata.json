@@ -1,0 +1,8 @@
+
+{
+  "name": "Integral University Attendance System",
+  "description": "A comprehensive application for employees to mark attendance via face recognition and for admins to manage employees, attendance, and leaves.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
